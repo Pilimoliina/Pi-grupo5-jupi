@@ -267,3 +267,27 @@ footer {
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+
+/*favoritos*/
+
+.div-favoritos img {
+    height: 100%;
+    width: 150px;
+}
+
+.div-favoritos {
+    background-color: rgb(48, 48, 48);
+    border: 1px solid transparent;
+    padding: 20px;
+    width: 150px;
+    box-sizing: content-box;
+    margin-bottom: 10px;
+    padding-bottom: 50px;
+}
+
+.sec-favoritos {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-evenly;
+}
