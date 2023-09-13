@@ -76,12 +76,12 @@ a {
 }
 
 .pelicula {
-    width: 30%;
     background-color: rgb(48, 48, 48);
     border: 1px solid transparent;
     padding: 20px;
-    box-sizing: border-box;
+    width: 25%;
     margin-bottom: 10px;
+    margin: 20px;
 }
 
 .pelicula img {
@@ -151,7 +151,14 @@ footer {
 
 .guardar {
     display: flex;
-    justify-content: start;
+    justify-content: center;
+}
+
+.boton {
+    background-color: rgb(225, 204, 192);
+    color: black;
+    border-radius: 5px;
+    border: 1px solid white;
 }
 
 /*mediaquerys*/
@@ -191,15 +198,21 @@ footer {
         margin: 10px;
     }
 
-
     .sec-buscar {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-}
+    .sec-favoritos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70%;
+        margin: 10px;
+    }
 
+}
 
 /*generos*/
 .titulo-genero {
@@ -242,24 +255,31 @@ footer {
     color: white;
 }
 
+/*buscar*/
+
 .titulo-buscar {
     color: rgb(225, 204, 192);
     padding: 5px;
 }
 
+.subtitulo-b {
+    color: rgb(225, 204, 192);
+    display: flex;
+    justify-content: center;
+}
+
 .div-buscar img {
     height: 100%;
-    width: 150px;
+    width: 300px;
 }
 
 .div-buscar {
     background-color: rgb(48, 48, 48);
     border: 1px solid transparent;
     padding: 20px;
-    width: 150px;
-    box-sizing: content-box;
     margin-bottom: 10px;
-    padding-bottom: 50px;
+    padding-bottom: 90px;
+    margin: 20px;
 }
 
 .sec-buscar {
@@ -272,22 +292,31 @@ footer {
 
 .div-favoritos img {
     height: 100%;
-    width: 150px;
+    width: 300px;
 }
 
 .div-favoritos {
     background-color: rgb(48, 48, 48);
     border: 1px solid transparent;
     padding: 20px;
-    width: 150px;
-    box-sizing: content-box;
-    margin-bottom: 10px;
-    padding-bottom: 50px;
+    padding-bottom: 80px;
+    margin: 20px;
 }
 
 .sec-favoritos {
     display: flex;
     flex-wrap: wrap;
-
     justify-content: space-evenly;
 }
+
+.titulo-fav {
+   color: rgb(225, 204, 192); 
+   margin-left: 10px;
+}
+
+.subtitulo-fav {
+    color: rgb(225, 204, 192); 
+    display: flex;
+    justify-content: center;
+}
+
