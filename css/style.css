@@ -149,6 +149,11 @@ footer {
     justify-content: center;
 }
 
+.guardar {
+    display: flex;
+    justify-content: start;
+}
+
 /*mediaquerys*/
 @media(max-width: 420px) {
     .home-header {
@@ -180,6 +185,11 @@ footer {
         flex-direction: column;
         align-items: center;
     }
+
+    .div-detalle {
+        width: 70%;
+        margin: 10px;
+    }
     
 }
 
@@ -188,6 +198,10 @@ footer {
 .titulo-genero {
     color: rgb(225, 204, 192);
     margin: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(15, 24, 41);
+    padding: 10px;
 }
 
 .button-genero {
@@ -195,6 +209,8 @@ footer {
     margin: 20px;
     border-radius: 5px;
     padding: 7px;
+    height: 50px;
+    width: 150px;
 }
 
 .div-genero {
@@ -213,4 +229,8 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+}
+
+.link-genero {
+    color: white;
 }
