@@ -190,7 +190,14 @@ footer {
         width: 70%;
         margin: 10px;
     }
-    
+
+
+    .sec-buscar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
 }
 
 
@@ -233,4 +240,30 @@ footer {
 
 .link-genero {
     color: white;
+}
+
+.titulo-buscar {
+    color: rgb(225, 204, 192);
+    padding: 5px;
+}
+
+.div-buscar img {
+    height: 100%;
+    width: 150px;
+}
+
+.div-buscar {
+    background-color: rgb(48, 48, 48);
+    border: 1px solid transparent;
+    padding: 20px;
+    width: 150px;
+    box-sizing: content-box;
+    margin-bottom: 10px;
+    padding-bottom: 50px;
+}
+
+.sec-buscar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
