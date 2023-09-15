@@ -50,23 +50,15 @@ a {
 
 .banner{
     width: 100%;
-    height: 300px;
+    height: 400px;
     display: flex;
-    text-align: center;
-    align-items: center;
     margin-top: 20px;
-    justify-content: center;
   }
 
 /*main*/
 .titulo-peliculas {
     color: rgb(225, 204, 192);
     padding: 10px;
-}
-
-.imagen {
-    height: 500px;
-    margin: 5px;
 }
 
 .peliculas-container {
@@ -130,12 +122,8 @@ footer {
     background-color: rgb(48, 48, 48);
     border: 1px solid transparent;
     padding: 20px;
-    box-sizing: content-box;
     margin-bottom: 10px;
     padding-bottom: 50px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
 }
 
 .div-detalle img {
@@ -212,6 +200,12 @@ footer {
         margin: 10px;
     }
 
+    .div-buscar {
+        padding-bottom: 10px;
+    }
+
+
+
 }
 
 /*generos*/
@@ -226,28 +220,22 @@ footer {
 
 .button-genero {
     background-color: rgb(225, 204, 192);
-    margin: 20px;
+    margin: 5px;
     border-radius: 5px;
-    padding: 7px;
     height: 50px;
     width: 150px;
 }
 
 .div-genero {
-    display: flex;
-    flex-direction: column;
     width: 170px;
 }
 
 .div-genero2 {
-    display: flex;
-    flex-direction: column;
     width: 170px;
 }
 
 .sec-genero {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
@@ -277,7 +265,6 @@ footer {
     background-color: rgb(48, 48, 48);
     border: 1px solid transparent;
     padding: 20px;
-    margin-bottom: 10px;
     padding-bottom: 90px;
     margin: 20px;
 }
