@@ -1,9 +1,13 @@
-let busqueda = document.querySelector(".formulario-div");
-let API_KEY = "73bbcaff8fd928767c5142a00f422fa2";
-let url0     = `https://api.themoviedb.org/3/search/movie?api_key=${acaVaLaAPIKey}&query=${busqueda}`
+let julia = document.querySelector(".sec-buscar");
+let API_KEY  = "73bbcaff8fd928767c5142a00f422fa2";
 
+let qs = location.search; 
+let Obj = new URLSearchParams(qs)
+let buscar = Obj.get("Buscar")
+let url0     = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${buscar}`
+console.log(buscar)
 
-fetch(url)
+fetch(url0)
     .then(function(response){
         return response.json();
     })
@@ -22,3 +26,5 @@ fetch(url)
         .catch(function(error){
         return;
     })
+
+    
