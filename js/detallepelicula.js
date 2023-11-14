@@ -35,7 +35,7 @@ fetch(url4)
             titulo.innerText = data.title;
             generos.innerText = data.genres;
             fecha.innerText = "Lanzamiento:" + " " + data.release_date;
-            desc.innerText = data.overview;
+            desc.innerText = "Sinopsis:" + " " + data.overview;
             dur.innerText = data.runtime + " " + "min";
             calificacion.innerText = "Calificacion:" + " " + data.vote_average;
             generos1.innerText = "Genero:" + " " + generos;

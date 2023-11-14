@@ -20,6 +20,7 @@ fetch(url)
             }" alt="">
             <h5 class="subtitulo-pelicula">${data.results[index].title}</h5>
             </a>
+            <h5 class = "subtitulo-pelicula">${data.results[index].release_date}</h5>
             </div>`
         }
     })
