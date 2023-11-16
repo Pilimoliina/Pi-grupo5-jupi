@@ -42,6 +42,7 @@ fetch(url)
         }" alt="">
             <h5 class="subtitulo-pelicula">${data.results[index].title}</h5>
             </a>
+            <h5 class = "subtitulo-pelicula">${data.results[index].release_date}</h5>
         </div>`
         }
     })
@@ -62,6 +63,7 @@ fetch(url)
             }">
             <h5 class="subtitulo-pelicula">${data.results[index].name}</h5>
             </a>
+            <h5 class = "subtitulo-pelicula">${data.results[index].first_air_date}</h5>
             </div>`
         }
     })
@@ -69,3 +71,4 @@ fetch(url)
         return;
     })
 
+    

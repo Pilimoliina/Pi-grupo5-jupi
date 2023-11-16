@@ -221,9 +221,17 @@ footer {
 .button-genero {
     background-color: rgb(225, 204, 192);
     margin: 5px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 5px;
     height: 50px;
     width: 150px;
+}
+
+.pilar {
+    list-style-type: none;
 }
 
 .div-genero {
@@ -237,6 +245,7 @@ footer {
 .sec-genero {
     display: flex;
     justify-content: space-evenly;
+    flex-direction: row;
 }
 
 .link-genero {
@@ -298,7 +307,6 @@ footer {
 
 .titulo-fav {
    color: rgb(225, 204, 192); 
-   margin-left: 10px;
 }
 
 .subtitulo-fav {

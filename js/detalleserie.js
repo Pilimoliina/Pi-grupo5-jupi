@@ -9,6 +9,7 @@ let titulo = document.querySelector(".detalle1");
 let fecha = document.querySelector(".fecha");
 let desc = document.querySelector(".desc");
 let dur = document.querySelector(".temp");
+let calificacion = document.querySelector(".estrella");
 let boton = document.querySelector("#recom");
 let container = document.querySelector(".reco-container")
 let recomenDisplay = document.querySelector(".recomendar");
@@ -30,9 +31,10 @@ fetch(url)
         }
         img.src = `https://image.tmdb.org/t/p/w500/${data.poster_path}`;
         titulo.innerText = data.name;
-        generos.innerText = data.genres;
-        fecha.innerText = data.first_air_date;
-        desc.innerText = data.overview;
+        generos.innerText =  "Genero:" + " " + data.genres;
+        fecha.innerText = "Lanzamiento:" + " " + data.first_air_date;
+        desc.innerText = "Sinopsis:" + " " + data.overview;
+        calificacion.innerText =  "Calificacion:" + " " + data.vote_average;
         dur.innerText = "tempradas:" + " " + data.number_of_seasons;
             
     })

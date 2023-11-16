@@ -7,6 +7,9 @@ let buscar = Obj.get("Buscar")
 let url0     = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${buscar}`
 console.log(buscar)
 
+let noHay = document.querySelector(".resu");
+let nomP = document.querySelector("#resu2");
+
 fetch(url0)
     .then(function(response){
         return response.json();
@@ -20,7 +23,10 @@ fetch(url0)
             }" alt="">
             <h5 class="subtitulo-pelicula">${data.results[index].title}</h5>
             </a>
-            </div>`
+            </div>`  
+        }
+        for (let index = 0; index < 1; index++) {
+            noHay.innerHTML += `<h3 class="titulo-buscar">Resultados de su busqueda:${buscar}</h3>`  
         }
     })
         .catch(function(error){
