@@ -5,6 +5,7 @@ let qs = location.search;
 let Obj = new URLSearchParams(qs)
 let buscar = Obj.get("Buscar")
 let url0     = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${buscar}`
+let url01     = `https://api.themoviedb.org/3/search/tv?api_key=${API_KEY}&query=${buscar}`
 console.log(buscar)
 
 let noHay = document.querySelector(".resu");
@@ -19,8 +20,7 @@ fetch(url0)
         for (let index = 0; index < 5; index++) {
             julia.innerHTML += `<div class="pelicula">
             <a href="./detallepelicula.html?id=${data.results[index].id}">
-            <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[index].poster_path
-            }" alt="">
+            <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[index].poster_path}" alt="">
             <h5 class="subtitulo-pelicula">${data.results[index].title}</h5>
             </a>
             </div>`  
@@ -33,4 +33,28 @@ fetch(url0)
         return;
     })
 
-    
+fetch(url01)
+    .then(function(response){
+        return response.json();
+    })
+        .then(function(data){
+        console.log(data);
+        if (data.results.length == 0) {
+            noHay.innerHTML = `No hay resultados para: ${buscar}`
+        }
+        for (let index = 0; index < 5; index++) {
+            
+            julia.innerHTML += `<div class="pelicula">
+            <a href="./detalleserie.html?id=${data.results[index].id}">
+            <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[index].poster_path}" alt="">
+            <h5 class="subtitulo-pelicula">${data.results[index].name}</h5>
+            </a>
+            </div>`  
+        }
+        for (let index = 0; index < 1; index++) {
+            noHay.innerHTML += `<h3 class="titulo-buscar">Resultados de su busqueda:${buscar}</h3>`  
+        }
+    })
+        .catch(function(error){
+        return;
+}) 

@@ -12,7 +12,7 @@ fetch(urlP)
 
         for (let index = 0; index < 7; index++) {
             info.innerHTML += `<ul>
-                    <li class="pilar"><a class="button-genero" href="./generos.html?id=${data.genres[index].id}">${data.genres[index].name}</a></li>
+                    <li class="pilar"><a class="button-genero" href="./generos.html?peliculasId=${data.genres[index].id}">${data.genres[index].name}</a></li>
                 </ul>`;
         }
     })
@@ -32,7 +32,7 @@ fetch(urlP)
 
         for (let index = 0; index < 7; index++) {
             info.innerHTML += ` <ul>
-                    <li class="pilar"><a class="button-genero" href="./generos.html?id=${data.genres[index].id}">${data.genres[index].name}</a></li>
+                    <li class="pilar"><a class="button-genero" href="./generos.html?seriesId=${data.genres[index].id}">${data.genres[index].name}</a></li>
                 </ul>`;
         }
     })
