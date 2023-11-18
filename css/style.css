@@ -2,6 +2,7 @@
     background-color: rgb(0, 0, 0);
     margin: 0;
     color: white;
+
 }
 /*header*/
 
@@ -203,6 +204,13 @@ footer {
     .div-buscar {
         padding-bottom: 10px;
     }
+
+    section.sec-genero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
 
 
 

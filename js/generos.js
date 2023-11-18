@@ -23,6 +23,7 @@ if (peliculasId!=null) {
                 <a href="./detallepelicula.html?id=${data.results[index].id}">
                 <img class="imagen-buscar" src="https://image.tmdb.org/t/p/w500/${data.results[index].poster_path}" alt="">
                 <h4 class="subtitulo-b">${data.results[index].title}</h4>
+                <h4 class="subtitulo-b">${data.results[index].release_date}</h4>
                 </a>
             </div>`
         }
@@ -48,6 +49,7 @@ if (seriesId!=null) {
             <a href="./detalleserie.html?id=${data.results[index].id}">
             <img class="imagen-buscar" src="https://image.tmdb.org/t/p/w500/${data.results[index].poster_path}" alt="">
             <h4 class="subtitulo-b">${data.results[index].name}</h4>
+            <h4 class="subtitulo-b">${data.results[index].first_air_date}</h4>
             </a>
         </div>`
         }

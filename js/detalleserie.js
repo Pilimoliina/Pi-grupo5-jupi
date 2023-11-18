@@ -10,6 +10,7 @@ let fecha = document.querySelector(".fecha");
 let desc = document.querySelector(".desc");
 let dur = document.querySelector(".temp");
 let calificacion = document.querySelector(".estrella");
+let generos1 = document.querySelector(".link-genero");
 let boton = document.querySelector("#recom");
 let container = document.querySelector(".reco-container");
 let recomenDisplay = document.querySelector(".recomendar");
@@ -29,14 +30,13 @@ fetch(url)
         console.log(data);
         let generos = ""
         for (let index = 0; index < data.genres.length; index++) {
-            generos+=`<a class="link-genero" href="./generos.html?id=${data.genres[index].id}">
-             ${data.genres[index].name}
+            generos += `<a class="link-genero" href="./generos.html?seriesId=${data.genres[index].id}">${data.genres[index].name}
             </a>`
             
         }
         img.src = `https://image.tmdb.org/t/p/w500/${data.poster_path}`;
         titulo.innerText = data.name;
-        generos.innerText =  "Genero:" + " " + data.genres;
+        generos1.innerHTML =  "Genero: " +  generos ;
         fecha.innerText = "Lanzamiento:" + " " + data.first_air_date;
         desc.innerText = "Sinopsis:" + " " + data.overview;
         calificacion.innerText =  "Calificacion:" + " " + data.vote_average;
@@ -110,7 +110,7 @@ fetch(urlT)
                 if (data.results.length > 0){
                     for (let index = 0; index < 5; index++) {
                     const review = data.results[index]
-                    infoMas += `<p>${review.autor}</p>
+                    infoMas += `<p>${review.author}</p>
                     <p>${review.content}</p>`
                     }
                 } else {

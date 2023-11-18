@@ -9,7 +9,7 @@ let titulo = document.querySelector(".detalle1");
 let fecha = document.querySelector(".fecha");
 let desc = document.querySelector(".desc");
 let dur = document.querySelector(".duracion");
-let generos1 = document.querySelector(".genero");
+let generos1 = document.querySelector(".link-genero");
 let calificacion = document.querySelector(".estrella");
 let boton = document.querySelector("#recom");
 let container = document.querySelector(".reco-container")
@@ -32,17 +32,16 @@ fetch(url4)
         console.log(data);
         let generos = ""
         for (let index = 0; index < data.genres.length; index++) {
-            generos += `${data.genres[index].name}`
+            generos += `<a class="link-genero" href="./generos.html?peliculasId=${data.genres[index].id}">${data.genres[index].name} </a>`
             
         }
             img.src = `https://image.tmdb.org/t/p/w500/${data.poster_path}`;
             titulo.innerText = data.title;
-            generos.innerText = data.genres;
             fecha.innerText = "Lanzamiento:" + " " + data.release_date;
             desc.innerText = "Sinopsis:" + " " + data.overview;
             dur.innerText = data.runtime + " " + "min";
             calificacion.innerText = "Calificacion:" + " " + data.vote_average;
-            generos1.innerText = "Genero: " + generos ;
+            generos1.innerHTML =  "Genero: " +  generos ;
 
 
     })

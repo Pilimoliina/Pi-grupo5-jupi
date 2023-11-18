@@ -9,7 +9,9 @@ let url01     = `https://api.themoviedb.org/3/search/tv?api_key=${API_KEY}&query
 console.log(buscar)
 
 let noHay = document.querySelector(".resu");
+
 let nomP = document.querySelector("#resu2");
+noHay.innerHTML = `<img  class="cargando" src="./img/cargando2.gif" alt="Cargando...">`
 
 fetch(url0)
     .then(function(response){
@@ -17,6 +19,12 @@ fetch(url0)
     })
         .then(function(data){
         console.log(data);
+        if (data.results.length == 0) {
+            noHay.innerHTML = `No hay resultados para: ${buscar}`
+        } 
+        else {
+            noHay.innerHTML = `Resultados de su busqueda:${buscar}`
+        }
         for (let index = 0; index < 5; index++) {
             julia.innerHTML += `<div class="pelicula">
             <a href="./detallepelicula.html?id=${data.results[index].id}">
@@ -24,9 +32,6 @@ fetch(url0)
             <h5 class="subtitulo-pelicula">${data.results[index].title}</h5>
             </a>
             </div>`  
-        }
-        for (let index = 0; index < 1; index++) {
-            noHay.innerHTML += `<h3 class="titulo-buscar">Resultados de su busqueda:${buscar}</h3>`  
         }
     })
         .catch(function(error){
@@ -41,6 +46,9 @@ fetch(url01)
         console.log(data);
         if (data.results.length == 0) {
             noHay.innerHTML = `No hay resultados para: ${buscar}`
+        } 
+        else {
+            noHay.innerHTML = `Resultados de su busqueda:${buscar}`
         }
         for (let index = 0; index < 5; index++) {
             
@@ -50,9 +58,6 @@ fetch(url01)
             <h5 class="subtitulo-pelicula">${data.results[index].name}</h5>
             </a>
             </div>`  
-        }
-        for (let index = 0; index < 1; index++) {
-            noHay.innerHTML += `<h3 class="titulo-buscar">Resultados de su busqueda:${buscar}</h3>`  
         }
     })
         .catch(function(error){
